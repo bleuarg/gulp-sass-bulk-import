@@ -13,7 +13,7 @@ module.exports = function() {
         var contents = file.contents.toString('utf-8');
 
         // regex to match an @import that contains glob pattern
-        var reg = /@import\s+["']([^"']+\*(\.scss)?)["'];?/;
+        var reg = /@import\s+["']([^"']*\*[^"']*(\.scss)?)["'];?/;
         var result;
 
         while((result = reg.exec(contents)) !== null) {
